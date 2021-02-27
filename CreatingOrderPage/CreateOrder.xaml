@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="CreatingOrderPage.CreateOrder"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CreatingOrderPage"
+             mc:Ignorable="d" Height="1000.2" Width="302" >
+    <Grid Margin="0,0,0,157.2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="488*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Sipariş Oluştur" FontSize ="15"  HorizontalAlignment="Left" Margin="89,31,-7.6,0" VerticalAlignment="Top" Width="221" Height="41"/>
+        <Label Content="Sipariş No:" FontSize ="10" HorizontalAlignment="Left" Margin="-4,95,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.994,0.659" Height="35" Width="75"/>
+        <TextBox HorizontalAlignment="Left" Name="order_id" Height="21" Margin="89,95,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.506,2.403"/>
+        <Label Content="Masa:" FontSize ="10" HorizontalAlignment="Left" Margin="10,135,0,0" VerticalAlignment="Top" Height="35" Width="61"/>
+        <TextBox HorizontalAlignment="Left" x:Name="desk_id" Height="21" Margin="89,144,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.506,2.403"/>
+        <Label Content="Adres:" FontSize ="10" HorizontalAlignment="Left" Margin="10,189,0,0" VerticalAlignment="Top" Height="36" Width="65"/>
+        <TextBox HorizontalAlignment="Left" x:Name="adress" Height="36" Margin="89,189,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="149" RenderTransformOrigin="0.506,2.403"/>
+        <Label Content="Ürünler:" FontSize ="10" HorizontalAlignment="Left" Margin="3,252,0,0" VerticalAlignment="Top" Height="35" Width="81"/>
+        <ListView HorizontalAlignment="Left" Name="order_items" Height="130" Margin="89,252,0,0" VerticalAlignment="Top" Width="150">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Ürün Adı" Width="150"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Sipariş Oluştur" Name="createButton" HorizontalAlignment="Left" Margin="142,387,0,0" VerticalAlignment="Top" Width="97" Height="30" Click="createButton_Click"/>
+        <Button Content="Seçili Ürünü Sil" Name="deleteButton" HorizontalAlignment="Left" Margin="31,387,0,0" VerticalAlignment="Top" Width="105" Height="30" RenderTransformOrigin="0.539,-0.505" Click="deleteButton_Click"/>
+
+    </Grid>
+</UserControl>

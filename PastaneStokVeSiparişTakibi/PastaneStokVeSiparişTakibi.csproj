@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F652D9D4-9381-4EB9-A69E-EC700E4099B3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PastaneStokVeSiparişTakibi</RootNamespace>
+    <AssemblyName>PastaneStokVeSiparişTakibi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.23.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminHomePage.Designer.cs">
+      <DependentUpon>AdminHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CashierHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CashierHomePage.Designer.cs">
+      <DependentUpon>CashierHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckPage.Designer.cs">
+      <DependentUpon>CheckPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderOptions.Designer.cs">
+      <DependentUpon>OrderOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AdminHomePage.resx">
+      <DependentUpon>AdminHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CashierHomePage.resx">
+      <DependentUpon>CashierHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CheckPage.resx">
+      <DependentUpon>CheckPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderOptions.resx">
+      <DependentUpon>OrderOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blog-wp-login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\brownie.jpg" />
+    <Content Include="Resources\cikolatali-yas-pasta.jpg" />
+    <Content Include="Resources\cola.jpg" />
+    <Content Include="Resources\ekler.jpg" />
+    <Content Include="Resources\elmalı-tart.jpg" />
+    <Content Include="Resources\fanta.jpg" />
+    <Content Include="Resources\framboazlı-cheesecake.jpg" />
+    <Content Include="Resources\ice-tea.jpg" />
+    <Content Include="Resources\kakaolu-islak-kek.jpg" />
+    <Content Include="Resources\kestaneli-yas-pasta.jpg" />
+    <Content Include="Resources\limonata.jpg" />
+    <Content Include="Resources\limonlu-cheesecake.jpg" />
+    <Content Include="Resources\meyveli-soda.png" />
+    <Content Include="Resources\mozaik-pasta.jpg" />
+    <Content Include="Resources\muzlu-magnolya.jpg" />
+    <Content Include="Resources\nescafe-gold.jpg" />
+    <Content Include="Resources\pasta-beyaz-cilekli.jpg" />
+    <Content Include="Resources\profiterol.jpg" />
+    <Content Include="Resources\profiterollu-yas-pasta.jpg" />
+    <Content Include="Resources\rengarenk-donut.jpg" />
+    <Content Include="Resources\renkli_makaronlar.jpg" />
+    <Content Include="Resources\sade-soda.jpg" />
+    <Content Include="Resources\san-sebastian.jpg" />
+    <Content Include="Resources\smoothie.jpg" />
+    <Content Include="Resources\sprite.jpg" />
+    <Content Include="Resources\sufle.jpg" />
+    <Content Include="Resources\sutlu-kahve-sekerli.jpg" />
+    <Content Include="Resources\tiramisu.jpg" />
+    <Content Include="Resources\trileçe.jpg" />
+    <Content Include="Resources\vişneli-yas-pasta.jpeg" />
+    <Content Include="Resources\çay.jpg" />
+    <Content Include="Resources\çikolatalı-magnolya.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CreatingOrderPage\CreatingOrderPage.csproj">
+      <Project>{E4305488-9EB2-4F92-A2E3-447E7066E14E}</Project>
+      <Name>CreatingOrderPage</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
